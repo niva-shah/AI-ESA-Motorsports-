@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Safety in Motorsports</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for data visualization -->
+</head>
+
+<body>
+  <header>
+    <h1>AI-Driven Safety in Motorsports</h1>
+    <p>Exploring equitable access to life-saving technology.</p>
+  </header>
+
+  <main>
+    <!-- Section 1: Overview of AI Tools -->
+    <section id="ai-tools">
+      <h2>Overview of AI Tools</h2>
+      <div class="tool">
+        <h3>NVIDIA DriveSim</h3>
+        <p>Simulates high-speed scenarios with predictive capabilities.</p>
+        <button onclick="toggleDetails('drivesim-details')">Learn More</button>
+        <div id="drivesim-details" class="hidden">
+          <p>DriveSim offers predictive insights but is costly and resource-heavy, limiting accessibility for smaller
+            teams.</p>
+        </div>
+      </div>
+      <div class="tool">
+        <h3>RACELOGIC VBOX</h3>
+        <p>Provides real-time GPS and motion tracking for risk analysis.</p>
+        <button onclick="toggleDetails('vbox-details')">Learn More</button>
+        <div id="vbox-details" class="hidden">
+          <p>VBOX is affordable and user-friendly but lacks predictive features critical for proactive safety measures.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Accessibility Gap Visualization -->
+    <section id="accessibility-gap">
+      <h2>Accessibility Gap</h2>
+      <p>Visualizing the cost barriers of AI tools for smaller teams.</p>
+      <canvas id="accessibilityChart" width="400" height="300"></canvas>
+    </section>
+
+    <!-- Section 3: Proposed Solutions -->
+    <section id="solutions">
+      <h2>Proposed Solutions</h2>
+      <ul>
+        <li>Open-source AI tools to reduce costs.</li>
+        <li>Partnerships between large and small teams to share resources.</li>
+        <li>Scaled-down, affordable versions of high-cost tools.</li>
+      </ul>
+    </section>
+
+    <!-- Section 4: Feedback Simulation -->
+    <section id="feedback">
+      <h2>Feedback Simulation</h2>
+      <p>How much would you allocate to safety innovations?</p>
+      <input type="range" id="budgetRange" min="0" max="100000" step="5000" value="50000" oninput="updateBudget()">
+      <p>Allocated Budget: <span id="budgetValue">$50,000</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Niva Shah </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
