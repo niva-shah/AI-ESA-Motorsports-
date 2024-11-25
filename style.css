@@ -1,63 +1,77 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-header {
-  background-color: #0057e7;
-  color: white;
-  text-align: center;
-  padding: 1.5em 0;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Safety in Motorsports</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for data visualization -->
+</head>
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-}
+<body>
+  <header>
+    <h1>AI-Driven Safety in Motorsports</h1>
+    <p>Exploring equitable access to life-saving technology.</p>
+  </header>
 
-header p {
-  margin: 0.5em 0 0;
-}
+  <main>
+    <!-- Section 1: Overview of AI Tools -->
+    <section id="ai-tools">
+      <h2>Overview of AI Tools</h2>
+      <div class="tool">
+        <h3>NVIDIA DriveSim</h3>
+        <p>Simulates high-speed scenarios with predictive capabilities.</p>
+        <button onclick="toggleDetails('drivesim-details')">Learn More</button>
+        <div id="drivesim-details" class="hidden">
+          <p>DriveSim offers predictive insights but is costly and resource-heavy, limiting accessibility for smaller teams.</p>
+        </div>
+      </div>
+      <div class="tool">
+        <h3>RACELOGIC VBOX</h3>
+        <p>Provides real-time GPS and motion tracking for risk analysis.</p>
+        <button onclick="toggleDetails('vbox-details')">Learn More</button>
+        <div id="vbox-details" class="hidden">
+          <p>VBOX is affordable and user-friendly but lacks predictive features critical for proactive safety measures.</p>
+        </div>
+      </div>
+    </section>
 
-main {
-  padding: 1em 2em;
-}
+    <!-- Section 2: Accessibility Gap Visualization -->
+    <section id="accessibility-gap">
+      <h2>Accessibility Gap</h2>
+      <p>Visualizing the cost barriers of AI tools for smaller teams.</p>
+      <canvas id="accessibilityChart" width="400" height="300"></canvas>
+    </section>
 
-section {
-  margin: 2em 0;
-}
+    <!-- Section 3: Proposed Solutions -->
+    <section id="solutions">
+      <h2>Proposed Solutions</h2>
+      <ul>
+        <li>Open-source AI tools to reduce costs.</li>
+        <li>Partnerships between large and small teams to share resources.</li>
+        <li>Scaled-down, affordable versions of high-cost tools.</li>
+        <li>Collaboration with academic institutions for modular AI innovation.</li>
+      </ul>
+    </section>
 
-.tool {
-  border: 1px solid #ccc;
-  padding: 1em;
-  margin: 1em 0;
-  border-radius: 5px;
-  background: white;
-}
+    <!-- Section 4: Feedback Simulation -->
+    <section id="feedback">
+      <h2>Feedback Simulation</h2>
+      <p>How much would you allocate to safety innovations?</p>
+      <input type="range" id="budgetRange" min="0" max="100000" step="5000" value="50000" oninput="updateBudget()">
+      <p>Allocated Budget: <span id="budgetValue">$50,000</span></p>
+      <div id="budgetFeedback" class="hidden">
+        <p>Thank you! Your feedback highlights the importance of resource allocation in advancing safety technologies.</p>
+      </div>
+    </section>
+  </main>
 
-button {
-  background: #0057e7;
-  color: white;
-  border: none;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  border-radius: 3px;
-}
+  <footer>
+    <p>Created by Niva Shah | <a href="https://niva-shah.github.io/AI-ESA-Motorsports-/">Visit Prototype</a></p>
+  </footer>
 
-button:hover {
-  background: #003c9f;
-}
+  <script src="script.js"></script>
+</body>
 
-.hidden {
-  display: none;
-}
-
-footer {
-  text-align: center;
-  padding: 1em 0;
-  background: #ccc;
-}
+</html>
