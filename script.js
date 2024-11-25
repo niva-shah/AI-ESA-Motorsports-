@@ -14,12 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
       datasets: [
         {
           label: 'Cost (USD)',
-          data: [500000, 10000], // Example costs
+          data: [500000, 10000],
           backgroundColor: ['#0057e7', '#ffc107'],
         },
       ],
     },
     options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'AI Tool Cost Comparison',
+        },
+      },
       scales: {
         y: {
           beginAtZero: true,
@@ -35,23 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         },
       },
-      plugins: {
-        legend: {
-          display: true,
-          position: 'top',
-        },
-      },
     },
   });
 });
 
-// Feedback Simulation: Update Budget Value
+// Feedback Simulation: Update Budget Value and Display Feedback
 function updateBudget() {
   const budget = document.getElementById('budgetRange').value;
   document.getElementById('budgetValue').innerText = `$${parseInt(budget).toLocaleString()}`;
-
   const feedback = document.getElementById('budgetFeedback');
-  if (budget > 80000) {
+  if (budget > 75000) {
     feedback.classList.remove('hidden');
   } else {
     feedback.classList.add('hidden');
