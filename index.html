@@ -24,8 +24,7 @@
         <p>Simulates high-speed scenarios with predictive capabilities.</p>
         <button onclick="toggleDetails('drivesim-details')">Learn More</button>
         <div id="drivesim-details" class="hidden">
-          <p>DriveSim offers predictive insights but is costly and resource-heavy, limiting accessibility for smaller
-            teams.</p>
+          <p>DriveSim offers predictive insights but is costly and resource-heavy, limiting accessibility for smaller teams.</p>
         </div>
       </div>
       <div class="tool">
@@ -33,8 +32,7 @@
         <p>Provides real-time GPS and motion tracking for risk analysis.</p>
         <button onclick="toggleDetails('vbox-details')">Learn More</button>
         <div id="vbox-details" class="hidden">
-          <p>VBOX is affordable and user-friendly but lacks predictive features critical for proactive safety measures.
-          </p>
+          <p>VBOX is affordable and user-friendly but lacks predictive features critical for proactive safety measures.</p>
         </div>
       </div>
     </section>
@@ -53,6 +51,7 @@
         <li>Open-source AI tools to reduce costs.</li>
         <li>Partnerships between large and small teams to share resources.</li>
         <li>Scaled-down, affordable versions of high-cost tools.</li>
+        <li>Collaboration with academic institutions for modular AI innovation.</li>
       </ul>
     </section>
 
@@ -62,11 +61,14 @@
       <p>How much would you allocate to safety innovations?</p>
       <input type="range" id="budgetRange" min="0" max="100000" step="5000" value="50000" oninput="updateBudget()">
       <p>Allocated Budget: <span id="budgetValue">$50,000</span></p>
+      <div id="budgetFeedback" class="hidden">
+        <p>Thank you! Your feedback highlights the importance of resource allocation in advancing safety technologies.</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>Created by Niva Shah </p>
+    <p>Created by Niva Shah | <a href="https://niva-shah.github.io/AI-ESA-Motorsports-/">Visit Prototype</a></p>
   </footer>
 
   <script src="script.js"></script>
