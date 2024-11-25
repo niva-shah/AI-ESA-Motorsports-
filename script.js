@@ -21,7 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     options: {
       scales: {
-        y: { beginAtZero: true },
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Cost (USD)',
+          },
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'AI Tools',
+          },
+        },
+      },
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+        },
       },
     },
   });
@@ -31,4 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function updateBudget() {
   const budget = document.getElementById('budgetRange').value;
   document.getElementById('budgetValue').innerText = `$${parseInt(budget).toLocaleString()}`;
+
+  const feedback = document.getElementById('budgetFeedback');
+  if (budget > 80000) {
+    feedback.classList.remove('hidden');
+  } else {
+    feedback.classList.add('hidden');
+  }
 }
